@@ -17,7 +17,7 @@ export const MainView = () => {
         genre: "Action", 
         director: "Robert Clouse", 
         actor: "Bruce Lee",
-        image: "https://www.imdb.com/title/tt0070034/mediaviewer/rm638853120/?ref_=tt_ov_i"
+        image: "https://m.media-amazon.com/images/M/MV5BZDAyYjAwNmMtMjM5OC00NTc5LThmNjAtOTUxODQxOWYwOTE5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
     },
     {
         id: 2, 
@@ -26,7 +26,7 @@ export const MainView = () => {
         genre: "Action", 
         director: "Yuen Woo-ping", 
         actor: "Jackie Chan",
-        image: "https://www.imdb.com/title/tt0080179/mediaviewer/rm1059532801/"
+        image: "https://i.ebayimg.com/images/g/OPQAAOSwNSxVTlnE/s-l1200.jpg"
     },
     {
         id: 3, 
@@ -35,7 +35,7 @@ export const MainView = () => {
         genre: "Action", 
         director: "Newt Arnold", 
         actor: "Jean Claude Van Damme",
-        image: "https://www.imdb.com/title/tt0092675/mediaviewer/rm934555904/?ref_=tt_ov_i"
+        image: "https://m.media-amazon.com/images/M/MV5BMTQwOTgzNjkzMl5BMl5BanBnXkFtZTcwMjgxNDcyNA@@._V1_.jpg"
     }
   ]);
 

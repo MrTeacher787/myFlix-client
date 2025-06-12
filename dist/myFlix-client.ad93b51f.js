@@ -18442,7 +18442,7 @@ const MainView = ()=>{
             genre: "Action",
             director: "Robert Clouse",
             actor: "Bruce Lee",
-            image: "https://www.imdb.com/title/tt0070034/mediaviewer/rm638853120/?ref_=tt_ov_i"
+            image: "https://m.media-amazon.com/images/M/MV5BZDAyYjAwNmMtMjM5OC00NTc5LThmNjAtOTUxODQxOWYwOTE5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
         },
         {
             id: 2,
@@ -18451,7 +18451,7 @@ const MainView = ()=>{
             genre: "Action",
             director: "Yuen Woo-ping",
             actor: "Jackie Chan",
-            image: "https://www.imdb.com/title/tt0080179/mediaviewer/rm1059532801/"
+            image: "https://i.ebayimg.com/images/g/OPQAAOSwNSxVTlnE/s-l1200.jpg"
         },
         {
             id: 3,
@@ -18460,7 +18460,7 @@ const MainView = ()=>{
             genre: "Action",
             director: "Newt Arnold",
             actor: "Jean Claude Van Damme",
-            image: "https://www.imdb.com/title/tt0092675/mediaviewer/rm934555904/?ref_=tt_ov_i"
+            image: "https://m.media-amazon.com/images/M/MV5BMTQwOTgzNjkzMl5BMl5BanBnXkFtZTcwMjgxNDcyNA@@._V1_.jpg"
         }
     ]);
     const [selectedMovie, setSelectedMovie] = (0, _react.useState)(null);
@@ -18496,7 +18496,7 @@ const MainView = ()=>{
         columnNumber: 5
     }, undefined);
 };
-_s(MainView, "DpImv50MexfEInQH3zgbBxdNCYo=");
+_s(MainView, "dPMxToCE93fTSbZsSEEJzTMgo08=");
 _c = MainView;
 var _c;
 $RefreshReg$(_c, "MainView");
@@ -18506,7 +18506,7 @@ $RefreshReg$(_c, "MainView");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react":"jMk1U","../movie-card/movie-card":"6BY1s","../movie-view/movie-view":"dkfGy"}],"6BY1s":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../movie-card/movie-card":"6BY1s","../movie-view/movie-view":"dkfGy","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"6BY1s":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$f387 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$f387.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
