@@ -16,6 +16,7 @@
   "homepage": "https://github.com/MrTeacher787/myFlix-client#readme",
   "description": "",
   "dependencies": {
+    "prop-types": "^15.8.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
