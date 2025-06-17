@@ -11,7 +11,7 @@ export const MainView = () => {
   const [selectedMovie, setSelectedMovie] = useState(null);
 
   useEffect(() => {
-    fetch("")
+    fetch("https://kickflix-7d36cfc627dc.herokuapp.com/movies")
     .then((response) => response.json())
     .then((data) => {
       const moviesFromApi = data.docs.map((doc) => {
