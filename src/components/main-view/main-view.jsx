@@ -5,7 +5,7 @@ import { MovieCard } from "../movie-card/movie-card";
 // Importing MovieView
 import { MovieView } from "../movie-view/movie-view";
 
-export const MainView = () => {
+const MainView = () => {
   const [movies, setMovies] = useState([]);
 
   const [selectedMovie, setSelectedMovie] = useState(null);
@@ -51,3 +51,5 @@ export const MainView = () => {
     </div>
   );
 };
+
+export default MainView;
