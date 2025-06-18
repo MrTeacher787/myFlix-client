@@ -14,12 +14,13 @@ const MainView = () => {
     fetch("https://kickflix-7d36cfc627dc.herokuapp.com/movies")
     .then((response) => response.json())
     .then((data) => {
-      const moviesFromApi = data.docs.map((doc) => {
+      const moviesFromApi = data.map((movie) => {
         return {
-          id: doc.key,
-          title: doc.title,
+          id: movie.key,
+          title: movie.title,
+          director: movie.director_name?.[0],
+          description: movie.description,
           image: `https://kickflix-7d36cfc627dc.herokuapp.com/movies/ImageURL`,
-          director: doc.director_name?.[0],
         };
       });
 
