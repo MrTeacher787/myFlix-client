@@ -18,7 +18,7 @@ export const MainView = () => {
         return {
           id: doc.key,
           title: doc.title,
-          image: ``,
+          image: `https://kickflix-7d36cfc627dc.herokuapp.com/movies/ImageURL`,
           director: doc.director_name?.[0],
         };
       });
