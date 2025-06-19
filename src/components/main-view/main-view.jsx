@@ -17,10 +17,10 @@ const MainView = () => {
       const moviesFromApi = data.map((movie) => {
         return {
           _id: movie._id,
-          title: movie.title,
-          director: movie.director_name?.[0],
-          description: movie.description,
-          image: `https://kickflix-7d36cfc627dc.herokuapp.com/movies/ImageURL`,
+          title: movie.Title,
+          director: movie.Director.name?.[0],
+          description: movie.Description,
+          image: movie.ImageURL,
         };
       });
 
