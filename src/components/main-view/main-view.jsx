@@ -16,7 +16,7 @@ const MainView = () => {
     .then((data) => {
       const moviesFromApi = data.map((movie) => {
         return {
-          id: movie.key,
+          _id: movie._id,
           title: movie.title,
           director: movie.director_name?.[0],
           description: movie.description,
