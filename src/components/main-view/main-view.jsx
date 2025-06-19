@@ -18,7 +18,9 @@ const MainView = () => {
         return {
           id: movie._id,
           title: movie.Title,
-          director: movie.Director.name?.[0],
+          actor: movie.Actor,
+          genre: movie.Genre.Name,
+          director: movie.Director.Name,
           description: movie.Description,
           image: movie.ImageURL,
         };
