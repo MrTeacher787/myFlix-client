@@ -4,7 +4,8 @@ import PropTypes from "prop-types";
 // The MovieCard function component
 export const MovieCard = ({ movie, onMovieClick }) => {
     return (
-      <div
+      <div 
+        className="border"
         onClick={() => {
             onMovieClick(movie);
         }}
