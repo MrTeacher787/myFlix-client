@@ -1,4 +1,27 @@
 .my-flix {
   color: #4682b4;
 }
+
+img {
+  border-radius: 15px;
+  max-width: 25%;
+}
+
+.name-container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  display: flex;
+}
+
+.border {
+  border: 2px solid red;
+  padding: 12px;
+}
+
+.border:hover {
+  cursor: pointer;
+  border-color: #4682b4;
+}
 /*# sourceMappingURL=myFlix-client.9f367d21.css.map */
