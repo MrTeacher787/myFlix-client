@@ -41,7 +41,7 @@ const MainView = () => {
   }
   
   return (
-    <div>
+    <div className="name-container">
       {movies.map((movie) => (
         <MovieCard 
           key={movie.id} 
