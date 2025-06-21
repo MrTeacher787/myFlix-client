@@ -2,10 +2,8 @@ import PropTypes from "prop-types";
 
 export const MovieView = ({ movie, onBackClick }) => {
     return (
-        <div>
-            <div>
+        <div className="name-container">
                 <img src={movie.image} />
-            </div>
             <div>
                 <span>Title: </span>
                 <span>{movie.title}</span>
