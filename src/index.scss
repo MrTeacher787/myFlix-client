@@ -3,3 +3,26 @@ $color: steelblue;
 .my-flix {
     color: $color;
 }
+
+img {
+    max-width: 25%;
+    border-radius: 15px;
+}
+
+.name-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.border {
+    border: red 2px solid;
+    padding: 12px;
+
+    &:hover {
+        border-color: $color;
+        cursor: pointer;
+    }
+}
