@@ -4,31 +4,39 @@ import { useState, useEffect } from "react";
 import { MovieCard } from "../movie-card/movie-card";
 // Importing MovieView
 import { MovieView } from "../movie-view/movie-view";
+// Importing LoginView
+import { LoginView } from "../login-view/login-view";
 
 const MainView = () => {
   const [movies, setMovies] = useState([]);
 
   const [selectedMovie, setSelectedMovie] = useState(null);
 
+  const [user, setUser] = useState(null);
+
   useEffect(() => {
     fetch("https://kickflix-7d36cfc627dc.herokuapp.com/movies")
-    .then((response) => response.json())
-    .then((data) => {
-      const moviesFromApi = data.map((movie) => {
-        return {
-          id: movie._id,
-          title: movie.Title,
-          actor: movie.Actor[0].Name,
-          genre: movie.Genre.Name,
-          director: movie.Director.Name,
-          description: movie.Description,
-          image: movie.ImageURL,
-        };
-      });
+      .then((response) => response.json())
+      .then((data) => {
+        const moviesFromApi = data.map((movie) => {
+          return {
+            id: movie._id,
+            title: movie.Title,
+            actor: movie.Actor[0].Name,
+            genre: movie.Genre.Name,
+            director: movie.Director.Name,
+            description: movie.Description,
+            image: movie.ImageURL,
+          };
+        });
 
-      setMovies(moviesFromApi);
-    });
+        setMovies(moviesFromApi);
+      });
   }, []);
+
+  if (!user) {
+    return <LoginView />
+  }
 
   if (selectedMovie) {
         return (
