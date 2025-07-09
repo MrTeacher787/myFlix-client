@@ -6,6 +6,8 @@ import { MovieCard } from "../movie-card/movie-card";
 import { MovieView } from "../movie-view/movie-view";
 // Importing LoginView
 import { LoginView } from "../login-view/login-view";
+// Importing SignupView
+import { SignupView } from "../signup-view/signup-view";
 
 const MainView = () => {
   const storedUser = JSON.parse(localStorage.getItem("user"));
@@ -30,12 +32,14 @@ const MainView = () => {
 
   if (!user) {
     return (
-      <LoginView 
-        onLoggedIn={(user, token) => {
+      <>
+        <LoginView onLoggedIn={(user, token) => {
           setUser(user);
           setToken(token);
-        }} 
-      />
+          }} />
+          or
+          <SignupView />
+      </>
     );
   }
 
