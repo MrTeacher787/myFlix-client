@@ -9,21 +9,28 @@ export const LoginView = ({ onLoggedIn }) => {
     event.preventDefault();
 
     const data = {
-      access: username,
-      secret: password,
+      Username: username,
+      Password: password
     };
 
-    fetch("https://kickflix-7d36cfc627dc.herokuapp.com/login.json", {
+    fetch("https://kickflix-7d36cfc627dc.herokuapp.com/login", {
       method: "POST",
-      body: JSON.stringify(data),
-    }).then((response) => {
-      if (response.ok) {
-        onLoggedIn(username);
-      } else {
-        alert("Login failed!");
-      }
-    });
-  };
+      headres: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Login response: ", data);
+        if (data.user) {
+          onLoggedIn(data.user, data.token);
+        } else {
+          alert("No such user.")
+        }
+      })
+      .catch((e) => {
+        alert("Something went wrong!");
+      });
+    };
 
   return (
     <form onSubmit={handleSubmit}>
