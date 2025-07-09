@@ -9,33 +9,33 @@ import { LoginView } from "../login-view/login-view";
 
 const MainView = () => {
   const [movies, setMovies] = useState([]);
-
   const [selectedMovie, setSelectedMovie] = useState(null);
-
   const [user, setUser] = useState(null);
+  const [token, setToken] = useState(null);
 
   useEffect(() => {
-    fetch("https://kickflix-7d36cfc627dc.herokuapp.com/movies")
+    if (!token) {
+      return;
+    }
+
+    fetch("https://kickflix-7d36cfc627dc.herokuapp.com/movies", {
+      headers: { Authorization: `Bearer ${token}` }
+    })
       .then((response) => response.json())
       .then((data) => {
-        const moviesFromApi = data.map((movie) => {
-          return {
-            id: movie._id,
-            title: movie.Title,
-            actor: movie.Actor[0].Name,
-            genre: movie.Genre.Name,
-            director: movie.Director.Name,
-            description: movie.Description,
-            image: movie.ImageURL,
-          };
-        });
-
-        setMovies(moviesFromApi);
+        console.log(data);
       });
-  }, []);
+  }, [token]);
 
   if (!user) {
-    return <LoginView onLoggedIn={(user) => setUser(user)} />;
+    return (
+      <LoginView 
+        onLoggedIn={(user, token) => {
+          setUser(user);
+          setToken(token);
+        }} 
+      />
+    );
   }
 
   if (selectedMovie) {
@@ -44,6 +44,7 @@ const MainView = () => {
             <button 
               onClick={() => {
                 setUser(null);
+                setToken(null);
               }}
             >
               Logout
@@ -62,6 +63,7 @@ const MainView = () => {
             <button 
               onClick={() => {
                 setUser(null);
+                setToken(null);
               }}
             >
               Logout
@@ -76,6 +78,7 @@ const MainView = () => {
       <button 
         onClick={() => {
           setUser(null);
+          setToken(null);
         }}
       >
         Logout
