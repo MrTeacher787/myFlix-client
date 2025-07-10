@@ -9,7 +9,7 @@ import { LoginView } from "../login-view/login-view";
 // Importing SignupView
 import { SignupView } from "../signup-view/signup-view";
 
-const MainView = () => {
+export const MainView = () => {
   const storedUser = JSON.parse(localStorage.getItem("user"));
   const storedToken = localStorage.getItem("token");
   const [user, setUser] = useState(storedUser? storedUser : null);
@@ -103,5 +103,3 @@ const MainView = () => {
     </div>
   );
 };
-
-export default MainView;
