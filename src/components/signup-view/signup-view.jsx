@@ -16,7 +16,7 @@ export const SignupView = () => {
       Birthday: birthday
     };
 
-    fetch("https://kickflix-7d36cfc627dc.herokuapp.com", {
+    fetch("https://kickflix-7d36cfc627dc.herokuapp.com/users", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
