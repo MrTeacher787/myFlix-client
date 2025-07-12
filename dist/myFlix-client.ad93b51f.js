@@ -19558,7 +19558,7 @@ const LoginView = ({ onLoggedIn })=>{
         };
         fetch("https://kickflix-7d36cfc627dc.herokuapp.com/login", {
             method: "POST",
-            headres: {
+            headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(data)
@@ -19788,4 +19788,4 @@ $RefreshReg$(_c, "SignupView");
 }
 },{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}]},["hiyDA","gYcKb"], "gYcKb", "parcelRequireaec4", {}, null, null, "http://localhost:1234")
 
-//# sourceMappingURL=myflix-client.ad93b51f.js.map
+//# sourceMappingURL=myFlix-client.ad93b51f.js.map
