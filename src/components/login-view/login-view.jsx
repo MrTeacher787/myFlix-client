@@ -15,7 +15,7 @@ export const LoginView = ({ onLoggedIn }) => {
 
     fetch("https://kickflix-7d36cfc627dc.herokuapp.com/login", {
       method: "POST",
-      headres: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
     })
       .then((response) => response.json())
