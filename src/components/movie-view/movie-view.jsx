@@ -3,26 +3,26 @@ import PropTypes from "prop-types";
 export const MovieView = ({ movie, onBackClick }) => {
     return (
         <div className="name-container">
-                <img src={movie.image} />
+                <img src={movie.Image} />
             <div>
                 <span>Title: </span>
-                <span>{movie.title}</span>
+                <span>{movie.Title}</span>
             </div>
             <div>
                 <span>Description: </span>
-                <span>{movie.description}</span>
+                <span>{movie.Description}</span>
             </div>
             <div>
                 <span>Genre: </span>
-                <span>{movie.genre}</span>
+                <span>{movie.Genre.Name}</span>
             </div>
             <div>
                 <span>Director: </span>
-                <span>{movie.director}</span>
+                <span>{movie.Director.Name}</span>
             </div>
             <div>
                 <span>Actor: </span>
-                <span>{movie.actor}</span>
+                <span>{movie.Actor[0].Name}</span>
             </div>
             <button onClick={onBackClick}>Back</button>
         </div>
@@ -31,13 +31,13 @@ export const MovieView = ({ movie, onBackClick }) => {
 
 MovieView.propTypes = {
   movie: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    actor: PropTypes.string.isRequired,
-    genre: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    director: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
+    _id: PropTypes.string.isRequired,
+    Title: PropTypes.string.isRequired,
+    Actor: PropTypes.string.isRequired,
+    Genre: PropTypes.string.isRequired,
+    Description: PropTypes.string.isRequired,
+    Director: PropTypes.string.isRequired,
+    Image: PropTypes.string.isRequired,
   }).isRequired,
   onBackClick: PropTypes.func.isRequired,
 };
