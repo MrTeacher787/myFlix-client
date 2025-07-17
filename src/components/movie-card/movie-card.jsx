@@ -2,7 +2,7 @@
 import PropTypes from "prop-types";
 
 // The MovieCard function component
-export const MovieCard = ({ movie, onMovieClick, key }) => {
+export const MovieCard = ({ movie, onMovieClick }) => {
   console.log(movie)
     return (
       <div 
@@ -10,7 +10,6 @@ export const MovieCard = ({ movie, onMovieClick, key }) => {
         onClick={() => {
             onMovieClick(movie);
         }}
-        key = { key }
       >
         {movie.Title}
       </div>
