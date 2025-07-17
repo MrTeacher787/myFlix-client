@@ -24,7 +24,7 @@ MovieCard.propTypes = {
     Title: PropTypes.string.isRequired,
     Description: PropTypes.string.isRequired,
     Director: PropTypes.string.isRequired,
-    Image: PropTypes.string.isRequired,
+    ImageURL: PropTypes.string.isRequired,
   }).isRequired,
   onMovieClick: PropTypes.func.isRequired,
 };
