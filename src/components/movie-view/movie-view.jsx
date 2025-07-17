@@ -4,7 +4,7 @@ export const MovieView = ({ movie, onBackClick }) => {
     return (
         <div className="name-container">
             <div>
-                <img src={movie.Image} />
+                <img src={movie.ImageURL} />
             </div>                
             <div>
                 <span>Title: </span>
@@ -39,7 +39,7 @@ MovieView.propTypes = {
     Genre: PropTypes.string.isRequired,
     Description: PropTypes.string.isRequired,
     Director: PropTypes.string.isRequired,
-    Image: PropTypes.string.isRequired,
+    ImageURL: PropTypes.string.isRequired,
   }).isRequired,
   onBackClick: PropTypes.func.isRequired,
 };
