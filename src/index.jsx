@@ -3,9 +3,6 @@ import { createRoot } from 'react-dom/client';
 // Import statement to 'MainView'
 import { MainView } from "./components/main-view/main-view";
 
-// Import statement for 'Bootstrap'
-import "bootstrap/dist/css/bootstrap.min.css";
-
 // Import statement to bundle `./index.scss`
 import "./index.scss";
 
