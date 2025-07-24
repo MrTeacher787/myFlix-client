@@ -1,5 +1,7 @@
 $color: steelblue;
 
+@import "~bootstrap/scss/bootstrap.scss";
+
 .my-flix {
     color: $color;
 }
@@ -26,5 +28,3 @@ img {
         cursor: pointer;
     }
 }
-
-@import "~bootstrap/scss/bootstrap.scss";
