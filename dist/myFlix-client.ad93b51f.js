@@ -18478,6 +18478,7 @@ const MainView = ()=>{
         token
     ]);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
+        className: "justify-content-md-center",
         children: !user ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loginView.LoginView), {
@@ -18497,8 +18498,15 @@ const MainView = ()=>{
                     columnNumber: 11
                 }, undefined)
             ]
-        }, void 0, true) : selectedMovie ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        }, void 0, true) : selectedMovie ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
+            md: 8,
+            style: {
+                border: "1px solid black"
+            },
             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieView.MovieView), {
+                style: {
+                    border: "1px solid green "
+                },
                 movie: selectedMovie,
                 onBackClick: ()=>setSelectedMovie(null)
             }, void 0, false, {
@@ -18506,11 +18514,15 @@ const MainView = ()=>{
                 lineNumber: 51,
                 columnNumber: 11
             }, undefined)
-        }, void 0, false) : movies.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        }, void 0, false, {
+            fileName: "src/components/main-view/main-view.jsx",
+            lineNumber: 50,
+            columnNumber: 9
+        }, undefined) : movies.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             children: "The list is empty!"
         }, void 0, false, {
             fileName: "src/components/main-view/main-view.jsx",
-            lineNumber: 57,
+            lineNumber: 58,
             columnNumber: 9
         }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
             children: movies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieCard.MovieCard), {
@@ -18520,7 +18532,7 @@ const MainView = ()=>{
                     }
                 }, movie._id, false, {
                     fileName: "src/components/main-view/main-view.jsx",
-                    lineNumber: 61,
+                    lineNumber: 62,
                     columnNumber: 13
                 }, undefined))
         }, void 0, false)
@@ -21105,6 +21117,7 @@ const MovieView = ({ movie, onBackClick })=>{
         className: "name-container",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                className: "w-100",
                 src: movie.ImageURL
             }, void 0, false, {
                 fileName: "src/components/movie-view/movie-view.jsx",
