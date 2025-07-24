@@ -4,7 +4,7 @@ import "./movie-view.scss";
 export const MovieView = ({ movie, onBackClick }) => {
     return (
         <div className="name-container">
-                <img src={movie.ImageURL} />                
+                <img className="w-100" src={movie.ImageURL} />                
             <div>
                 <span>Title: </span>
                 <span>{movie.Title}</span>
