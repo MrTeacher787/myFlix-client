@@ -1,10 +1,12 @@
+import React from 'react';
+
 import { createRoot } from 'react-dom/client';
 
 // Import statement to 'MainView'
-import { MainView } from "./components/main-view/main-view";
+import { MainView } from './components/main-view/main-view';
 
 // Import statement to bundle `./index.scss`
-import "./index.scss";
+import './index.scss';
 
 // Import statement to 'Container'
 import Container from 'react-bootstrap/Container';
