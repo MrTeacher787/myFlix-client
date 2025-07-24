@@ -21596,4 +21596,4 @@ $RefreshReg$(_c, "SignupView");
 }
 },{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react-bootstrap/Button":"kNKIo","react-bootstrap/Form":"6LPqw"}]},["hiyDA","gYcKb"], "gYcKb", "parcelRequireaec4", {}, null, null, "http://localhost:1234")
 
-//# sourceMappingURL=myflix-client.ad93b51f.js.map
+//# sourceMappingURL=myFlix-client.ad93b51f.js.map
