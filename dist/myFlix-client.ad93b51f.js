@@ -674,19 +674,30 @@ var prevRefreshSig = globalThis.$RefreshSig$;
 $parcel$ReactRefreshHelpers$ca65.prelude(module);
 
 try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _client = require("react-dom/client");
 // Import statement to 'MainView'
 var _mainView = require("./components/main-view/main-view");
-// Import statement to bundle `./index.scss`
+// Import statement for 'Bootstrap'
 var _bootstrapMinCss = require("bootstrap/dist/css/bootstrap.min.css");
+// Import statement to bundle `./index.scss`
 var _indexScss = require("./index.scss");
+// Import statement to 'Container'
+var _container = require("react-bootstrap/Container");
+var _containerDefault = parcelHelpers.interopDefault(_container);
 // Main component (will eventually use all the others)
 const MyFlixApplication = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mainView.MainView), {}, void 0, false, {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _containerDefault.default), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mainView.MainView), {}, void 0, false, {
+            fileName: "src/index.jsx",
+            lineNumber: 19,
+            columnNumber: 9
+        }, undefined)
+    }, void 0, false, {
         fileName: "src/index.jsx",
-        lineNumber: 12,
-        columnNumber: 12
+        lineNumber: 18,
+        columnNumber: 7
     }, undefined);
 };
 _c = MyFlixApplication;
@@ -696,7 +707,7 @@ const root = (0, _client.createRoot)(container);
 // Tells React to render the app in the root DOM element
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(MyFlixApplication, {}, void 0, false, {
     fileName: "src/index.jsx",
-    lineNumber: 20,
+    lineNumber: 29,
     columnNumber: 13
 }, undefined));
 var _c;
