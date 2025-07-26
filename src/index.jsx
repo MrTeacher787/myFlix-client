@@ -6,9 +6,6 @@ import { MainView } from './components/main-view/main-view';
 // Import statement to 'Container'
 import Container from 'react-bootstrap/Container';
 
-// Import statement for Bootstrap css
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 // Import statement to bundle `./index.scss`
 import './index.scss';
 
