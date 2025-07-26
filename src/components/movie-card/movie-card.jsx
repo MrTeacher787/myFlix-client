@@ -10,7 +10,11 @@ export const MovieCard = ({ movie, onMovieClick }) => {
         <Card.Body>
           <Card.Title>{movie.Title}</Card.Title>
           <Card.Text>{movie.Description}</Card.Text>
-          <Button onClick={() => onMovieClick(movie)} variant="link">
+          <Button 
+            onClick={() => onMovieClick(movie)} 
+            variant="link"
+            className="open-button"
+          >
             Open
           </Button>
         </Card.Body>
