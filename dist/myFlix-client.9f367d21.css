@@ -13215,10 +13215,14 @@ img {
 }
 
 .back-button {
-  color: #f5f5f5;
-  background-color: #1e90ff;
-  border: none;
-  border-radius: 4px;
-  padding: 4px 12px;
+  color: #fff;
+  background-color: #a71313;
+  border: 2px solid #000;
+}
+
+.back-button:hover {
+  color: #fff;
+  background-color: #4682b4;
+  border: 2px solid #000;
 }
 /*# sourceMappingURL=myFlix-client.9f367d21.css.map */
