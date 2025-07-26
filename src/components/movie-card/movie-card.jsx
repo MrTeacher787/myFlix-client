@@ -5,18 +5,11 @@ import { Button, Card } from "react-bootstrap";
 // The MovieCard function component
 export const MovieCard = ({ movie, onMovieClick }) => {
     return (
-      <Card className="h-100">
+      <Card onClick={() => onMovieClick(movie)} className="h-100">
         <Card.Img variant="top" src={movie.ImageURL} />
         <Card.Body>
           <Card.Title>{movie.Title}</Card.Title>
           <Card.Text>{movie.Description}</Card.Text>
-          <Button 
-            onClick={() => onMovieClick(movie)} 
-            variant="link"
-            className="open-button"
-          >
-            Open
-          </Button>
         </Card.Body>
       </Card>
     );
