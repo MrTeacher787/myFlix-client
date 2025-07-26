@@ -11,7 +11,8 @@ $color: steelblue;
 
 img {
     max-width: 100%;
-    border-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 .name-container {
@@ -29,5 +30,17 @@ img {
     &:hover {
         border-color: $color;
         cursor: pointer;
+    }
+}
+
+.open-button {
+    border: black 2px solid;
+    color: white;
+    background-color: $primary;
+
+    &:hover {
+        border: black 2px solid;
+        color: white;
+        background-color: $color;
     }
 }
