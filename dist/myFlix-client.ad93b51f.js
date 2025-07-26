@@ -21393,6 +21393,7 @@ const LoginView = ({ onLoggedIn })=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                className: "submit-button",
                 variant: "primary",
                 type: "submit",
                 children: "Submit"
@@ -21576,6 +21577,7 @@ const SignupView = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                className: "submit-button",
                 variant: "primary",
                 type: "submit",
                 children: "Submit"
