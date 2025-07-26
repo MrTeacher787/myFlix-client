@@ -59,6 +59,15 @@ export const MainView = () => {
         <div>The list is empty!</div>
       ) : (
         <>
+          <button 
+            onClick={() => {
+              setUser(null);
+              setToken(null);
+              localStorage.clear();
+            }}
+          >
+            Logout
+          </button>
           {movies.map((movie) => (
             <Col className="mb-5" key={movie._id} md={3}>
               <MovieCard 
