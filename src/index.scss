@@ -1,5 +1,5 @@
-$primary: SeaGreen;
-$body-bg: Honeydew;
+$primary: rgb(167, 19, 19);
+$body-bg: rgb(183, 188, 183);
 
 @import "~bootstrap/scss/bootstrap.scss";
 
@@ -10,7 +10,7 @@ $color: steelblue;
 }
 
 img {
-    max-width: 25%;
+    max-width: 100%;
     border-radius: 15px;
 }
 
