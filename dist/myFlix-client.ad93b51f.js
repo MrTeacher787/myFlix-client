@@ -21249,7 +21249,7 @@ const MovieView = ({ movie, onBackClick })=>{
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
                 onClick: onBackClick,
-                className: "back-button",
+                className: "button",
                 style: {
                     cursor: "pointer"
                 },
@@ -21393,7 +21393,7 @@ const LoginView = ({ onLoggedIn })=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                className: "submit-button",
+                className: "button",
                 variant: "primary",
                 type: "submit",
                 children: "Submit"
@@ -21577,7 +21577,7 @@ const SignupView = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                className: "submit-button",
+                className: "button",
                 variant: "primary",
                 type: "submit",
                 children: "Submit"

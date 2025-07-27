@@ -13202,37 +13202,13 @@ img {
   border-color: #4682b4;
 }
 
-.open-button {
+.button {
   color: #fff;
   background-color: #a71313;
   border: 2px solid #000;
 }
 
-.open-button:hover {
-  color: #fff;
-  background-color: #4682b4;
-  border: 2px solid #000;
-}
-
-.back-button {
-  color: #fff;
-  background-color: #a71313;
-  border: 2px solid #000;
-}
-
-.back-button:hover {
-  color: #fff;
-  background-color: #4682b4;
-  border: 2px solid #000;
-}
-
-.submit-button {
-  color: #fff;
-  background-color: #a71313;
-  border: 2px solid #000;
-}
-
-.submit-button:hover {
+.button:hover {
   color: #fff;
   background-color: #4682b4;
   border: 2px solid #000;
