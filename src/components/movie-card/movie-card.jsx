@@ -7,7 +7,7 @@ export const MovieCard = ({ movie, onMovieClick }) => {
     return (
       <Card onClick={() => onMovieClick(movie)} className="h-100">
         <Card.Img variant="top" src={movie.ImageURL} />
-        <Card.Body>
+        <Card.Body style={{ backgroundColor:"white" }}>
           <Card.Title>{movie.Title}</Card.Title>
           <Card.Text>{movie.Description}</Card.Text>
         </Card.Body>
