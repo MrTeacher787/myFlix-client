@@ -33,31 +33,7 @@ img {
     }
 }
 
-.open-button {
-    border: black 2px solid;
-    color: white;
-    background-color: $primary;
-
-    &:hover {
-        border: black 2px solid;
-        color: white;
-        background-color: $color;
-    }
-}
-
-.back-button {
-    border: black 2px solid;
-    color: white;
-    background-color: $primary;
-
-    &:hover {
-        border: black 2px solid;
-        color: white;
-        background-color: $color;
-    }
-}
-
-.submit-button {
+.button {
     border: black 2px solid;
     color: white;
     background-color: $primary;

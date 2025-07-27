@@ -61,7 +61,7 @@ export const LoginView = ({ onLoggedIn }) => {
           placeholder="Must have minimum of 8 characters"
         />
       </Form.Group>    
-      <Button className="submit-button" variant="primary" type="submit">
+      <Button className="button" variant="primary" type="submit">
         Submit
       </Button>
     </Form>
