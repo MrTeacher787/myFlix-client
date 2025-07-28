@@ -2,9 +2,9 @@ import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 
 export const MovieView = ({ movies }) => {
-  const { movieId } = useParams();
+  const { movie_id } = useParams();
 
-  const movie = movies.find((m) => m._id === movieId);
+  const movie = movies.find((m) => m._id === movie_id);
     
   return (
     <div className="name-container">
