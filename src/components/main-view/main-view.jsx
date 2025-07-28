@@ -8,6 +8,8 @@ import { MovieView } from "../movie-view/movie-view";
 import { LoginView } from "../login-view/login-view";
 // Importing SignupView
 import { SignupView } from "../signup-view/signup-view";
+// Importing NavigationBar 
+import { NavigationBar } from "../navigation-bar/navigation-bar";
 // Importing Row from Bootstrap
 import Row from "react-bootstrap/Row";
 // Importing Col fromn Bootstrap
@@ -44,6 +46,14 @@ export const MainView = () => {
   
   return(
     <BrowserRouter>
+      <NavigationBar 
+        user={user}
+        onLoggedOut={() =>{
+          setUser(null);
+          setToken(null);
+          localStorage.clear()
+        }}
+      />
       <Row className="justify-content-md-center">
         <Routes>
           <Route
