@@ -33,7 +33,7 @@ export const MainView = () => {
       .then((movies) => {
         const moviesFromApi = movies.map((movie) => {
           return {
-            Image: movie.ImageURL ,
+            Image: movie.ImageURL,
             Title: movie.Title,
             Description: movie.Description
           };
