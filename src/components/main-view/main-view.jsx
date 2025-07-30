@@ -107,7 +107,7 @@ export const MainView = () => {
               <>
                 {!user ? (
                   <Navigate to="/login" replace />
-                ) : useBootstrapBreakpoints.length === 0 ? (
+                ) : movies.length === 0 ? (
                   <Col>The list is empty!</Col>
                 ) : (
                   <>
