@@ -31776,7 +31776,7 @@ const MovieView = ({ movies })=>{
         className: "name-container",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                className: "w-100",
+                className: "img",
                 src: movie.ImageURL
             }, void 0, false, {
                 fileName: "src/components/movie-view/movie-view.jsx",
