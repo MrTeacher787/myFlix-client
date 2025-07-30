@@ -11,8 +11,8 @@ export const MovieCard = ({ movie }) => {
       <Card.Body style={{ backgroundColor:"white" }}>
         <Card.Title>{movie.Title}</Card.Title>
         <Card.Text>{movie.Description}</Card.Text>
-        <Link to={`/movies/${encodedURIComponent(movie._id)}`}>
-          <Button variant="link">Open</Button>
+        <Link to={`/movies/${encodeURIComponent(movie._id)}`}>
+          <Button className="button" variant="link">Open</Button>
         </Link>
       </Card.Body>
     </Card>
