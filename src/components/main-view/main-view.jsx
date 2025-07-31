@@ -31,15 +31,7 @@ export const MainView = () => {
     })
       .then((response) => response.json())
       .then((movies) => {
-        const moviesFromApi = movies.map((movie) => {
-          return {
-            Image: movie.ImageURL,
-            Title: movie.Title,
-            Description: movie.Description
-          };
-        });
-
-        setMovies(moviesFromApi);
+        setMovies(movies);
       });
   }, []);
   
@@ -53,7 +45,7 @@ export const MainView = () => {
           localStorage.clear()
         }}
       />
-      <Row className="justify-content-md-center">
+      <Row className="justify-content-md-center mt-5">
         <Routes>
           <Route
             path="/users"
@@ -110,13 +102,13 @@ export const MainView = () => {
                 ) : movies.length === 0 ? (
                   <Col>The list is empty!</Col>
                 ) : (
-                  <>
+                  <Row className="align-items-stretch">
                     {movies.map((movie) => (
-                      <Col className="mb-4" key={movie._id} md={3}>
+                      <Col className="mb-4" key={movie._id} md={6} lg={3}>
                         <MovieCard movie={movie} />
                       </Col>
                     ))}
-                  </>
+                  </Row>
                 )}
               </>
             }
