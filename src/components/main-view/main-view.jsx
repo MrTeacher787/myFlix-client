@@ -10,6 +10,8 @@ import { LoginView } from "../login-view/login-view";
 import { SignupView } from "../signup-view/signup-view";
 // Importing NavigationBar 
 import { NavigationBar } from "../navigation-bar/navigation-bar";
+// Importing ProfileView
+import { ProfileView } from "../profile-view/profile-view";
 // Importing Row from Bootstrap
 import Row from "react-bootstrap/Row";
 // Importing Col fromn Bootstrap
@@ -112,6 +114,10 @@ export const MainView = () => {
                 )}
               </>
             }
+          />
+          <Route 
+            path="/profile" 
+            element={<ProfileView movies={movies} />}
           />
         </Routes>
       </Row>
