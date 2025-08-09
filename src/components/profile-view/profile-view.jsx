@@ -1,72 +1,90 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 export const ProfileView = () => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
   const [editing, setEditing] = useState(false);
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    birthday: ''
+    username: "",
+    email: "",
+    birthday: "",
   });
   const [loading, setLoading] = useState(true);
+  const token = localStorage.getItem("token");
 
   // Fetch user data on mount
   useEffect(() => {
-    fetch('/users')
-      .then(res => res.json())
-      .then(data => {
+    fetch(
+      `https://kickflix-7d36cfc627dc.herokuapp.com/users/${user.Username}`,
+      {
+        headers: { Authorization: `Bearer ${token}` },
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
         setUser(data);
         setFormData({
-          name: data.name,
-          email: data.email,
-          birthday: data.birthday
+          username: data.Username,
+          email: data.Email,
+          birthday: data.Birthday,
         });
         setLoading(false);
       })
-      .catch(err => {
-        console.error('Failed to fetch user:', err);
+      .catch((err) => {
+        console.error("Failed to fetch user:", err);
         setLoading(false);
       });
   }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSave = () => {
-    fetch('/users', {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData)
-    })
-      .then(res => res.json())
-      .then(updatedUser => {
+    fetch(
+      `https://kickflix-7d36cfc627dc.herokuapp.com/users/${user.Username}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          Username: formData.username,
+          Email: formData.email,
+          Birthday: formData.birthday,
+        }),
+      }
+    )
+      .then((res) => res.json())
+      .then((updatedUser) => {
         setUser(updatedUser);
         setEditing(false);
       })
-      .catch(err => console.error('Failed to update user:', err));
+      .catch((err) => console.error("Failed to update user:", err));
   };
 
   const handleDelete = () => {
-    if (window.confirm('Are you sure you want to delete your account? This action cannot be undone.')) {
-      fetch('/users', {
-        method: 'DELETE'
+    if (
+      window.confirm(
+        "Are you sure you want to delete your account? This action cannot be undone."
+      )
+    ) {
+      fetch("/users", {
+        method: "DELETE",
       })
-        .then(res => {
+        .then((res) => {
           if (res.ok) {
             // Optional: Redirect to logout or home page
-            window.location.href = '/';
+            window.location.href = "/";
           } else {
-            throw new Error('Account deletion failed');
+            throw new Error("Account deletion failed");
           }
         })
-        .catch(err => console.error(err));
+        .catch((err) => console.error(err));
     }
   };
 
@@ -81,31 +99,52 @@ export const ProfileView = () => {
         <div>
           <label>
             Name:
-            <input name="name" value={formData.name} onChange={handleChange} />
-          </label><br />
+            <input
+              name="name"
+              value={formData.username}
+              onChange={handleChange}
+            />
+          </label>
+          <br />
           <label>
             Email:
-            <input name="email" value={formData.email} onChange={handleChange} />
-          </label><br />
+            <input
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+          </label>
+          <br />
           <label>
             Birthday:
-            <input name="birthday" value={formData.birthday} onChange={handleChange} />
-          </label><br />
+            <input
+              name="birthday"
+              value={formData.birthday}
+              onChange={handleChange}
+            />
+          </label>
+          <br />
           <button onClick={handleSave}>Save</button>
           <button onClick={() => setEditing(false)}>Cancel</button>
         </div>
       ) : (
         <div>
-          <p><strong>Name:</strong> {user.name}</p>
-          <p><strong>Email:</strong> {user.email}</p>
-          <p><strong>Birthday:</strong> {user.birthday}</p>
+          <p>
+            <strong>Name:</strong> {formData.username}
+          </p>
+          <p>
+            <strong>Email:</strong> {formData.email}
+          </p>
+          <p>
+            <strong>Birthday:</strong> {formData.birthday}
+          </p>
           <button onClick={() => setEditing(true)}>Edit</button>
         </div>
       )}
 
       <hr />
 
-      <button onClick={handleDelete} style={{ color: 'red' }}>
+      <button onClick={handleDelete} style={{ color: "red" }}>
         Delete Account
       </button>
     </div>
