@@ -50,7 +50,22 @@ export const MainView = () => {
       <Row className="justify-content-md-center mt-5">
         <Routes>
           <Route
-            path="/users"
+            path="/profile"
+            element={
+              <>
+                {user ? (
+                  <Col md={5}>
+                    <ProfileView movies={movies} />
+                  </Col>
+                ) : (
+                  <Navigate to="/login" />
+                )}
+              </>
+            
+            }
+          />
+          <Route
+            path="/signup"
             element={
               <>
                 {user ? (
@@ -114,10 +129,6 @@ export const MainView = () => {
                 )}
               </>
             }
-          />
-          <Route 
-            path="/profile" 
-            element={<ProfileView movies={movies} />}
           />
         </Routes>
       </Row>
